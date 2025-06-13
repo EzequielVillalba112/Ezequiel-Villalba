@@ -1,37 +1,39 @@
 export const textAboutMe = [
   {
     lang: "es",
+    title: "Sobre mí",
     introduction: (
       <p>
-        ¡Hola! Soy <strong>Ezequiel Villalba</strong>, técnico en Análisis de
-        Sistemas Informáticos de Misiones, Argentina.
+        ¡Hola!, Soy técnico en Análisis de Sistemas Informáticos de Misiones,
+        Argentina.
       </p>
     ),
     skills: (
       <p>
         Me especializo en desarrollo front-end con tecnologías como{" "}
-        <strong>HTML</strong>, <strong>CSS</strong>,{" "}
-        <strong>JavaScript</strong> y <strong>React</strong>.
+        <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>{" "}
+        y <strong>React</strong>.
       </p>
     ),
     interests: (
       <p>
-        Me gusta aprender nuevas tecnologías y desarrollar interfaces reales
-        que sean fluidas y fáciles de usar.
+        Me gusta aprender nuevas tecnologías y desarrollar interfaces reales que
+        sean fluidas y fáciles de usar.
       </p>
     ),
     experience: (
       <p>
-        Actualmente estoy en búsqueda de mi primera oportunidad profesional
-        como desarrollador front-end.
+        Actualmente estoy en búsqueda de mi primera oportunidad profesional como
+        desarrollador front-end.
       </p>
     ),
   },
   {
     lang: "en",
+    title: "About me",
     introduction: (
       <p>
-        Hello! I'm <strong>Ezequiel Villalba</strong>, a Systems Analysis
+        Hello!, I'm  a Systems Analysis
         Technician from Misiones, Argentina.
       </p>
     ),
@@ -97,16 +99,20 @@ export const textFooter = [
 export const textNav = [
   {
     lang: "es",
-    home: "Inicio",
-    about: "Sobre mi",
-    projects: "Proyectos",
-    contact: "Contacto",
+    items: [
+      { text: "Inicio", url: "#" },
+      { text: "Sobre mi", url: "#" },
+      { text: "Proyectos", url: "#" },
+      { text: "Contacto", url: "#" },
+    ],
   },
   {
     lang: "en",
-    home: "Home",
-    about: "About",
-    projects: "Projects",
-    contact: "Contact",
+    items: [
+      { text: "Home", url: "#" },
+      { text: "About", url: "#" },
+      { text: "Projects", url: "#" },
+      { text: "Contact", url: "#" },
+    ],
   },
 ];
