@@ -1,15 +1,12 @@
 import styled from "styled-components";
 import { textNav } from "../../utils/Text";
-import { useLanguage } from "../../hooks/UseLanguage";
 import { ItemMenu } from "../molecula/ItemMenu";
 
 export const Nav = () => {
-  const { language, setLanguage, toggleLanguag } = useLanguage();
-  const content = textNav.find((t) => t.lang === language);
   return (
     <Container>
       <ul className="container-menu">
-        {content.items.map((item, key) => (
+        {textNav[0].items.map((item, key) => (
             <ItemMenu item={item} key={key}/>
         ))}
       </ul>

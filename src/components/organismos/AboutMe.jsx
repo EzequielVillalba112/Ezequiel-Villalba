@@ -1,25 +1,23 @@
 import styled from "styled-components";
-import { useLanguage } from "../../hooks/UseLanguage";
 import { textAboutMe } from "../../utils/Text";
 import { Title } from "../atomo/Title";
 import { PiArrowBendDownRightFill } from "react-icons/pi";
 
 export const AboutMe = () => {
-  const { language, setLanguage, toggleLanguag } = useLanguage();
-  const content = textAboutMe.find((t) => t.lang === language);
+
   return (
     <Container>
       <div className="div1">
-        <Title text={content.title} size="4rem" />
+        <Title text={textAboutMe[0].title} size="4rem" />
       </div>
       <div className="div2">
         <PiArrowBendDownRightFill color="#ff7e00" size="9rem" />
       </div>
       <div className="div3">
-        {content.introduction}
-        {content.skills}
-        {content.interests}
-        {content.experience}
+        {textAboutMe[0].introduction}
+        {textAboutMe[0].skills}
+        {textAboutMe[0].interests}
+        {textAboutMe[0].experience}
       </div>
     </Container>
   );

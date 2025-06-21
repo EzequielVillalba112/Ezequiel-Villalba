@@ -71,6 +71,7 @@ const Container = styled.section`
     justify-content: end;
     border-left: 1px solid var(--border_color);
     border-bottom: 1px solid var(--border_color);
+    padding: 40px;
     h2 {
       font-weight: 600;
       font-size: 4rem;
