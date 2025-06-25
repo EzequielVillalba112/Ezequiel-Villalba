@@ -1,13 +1,29 @@
 import styled from "styled-components";
 import { Title } from "../atomo/Title";
+import { ItemLogoTech } from "../molecula/itemLogoTech";
+import { Btn } from "../molecula/Btn";
 
-export const ProyectItem = () => {
+export const ProyectItem = ({ data }) => {
+  console.log(data);
+
   return (
     <Container>
       <div className="div1">
-        <Title text={"01"} text2={"Ctrl inventario"} size={"4rem"}/>
+        <Title text={data.nProyect} text2={data.title} size={"4rem"} />
       </div>
-      <div className="div2">2</div>
+      <div className="div2">
+        <p>{data.detail}</p>
+        <div className="tech">
+          <h2>Tecnologías utilizadas:</h2>
+          <div className="item-tech">
+            {data.Tech.map((item, i) => (
+              <ItemLogoTech img={item} alt={data.title + ` img`} key={i} />
+            ))}
+          </div>
+
+          <Btn text={"Ver página"} url={"#"} target={"_blank"}/>
+        </div>
+      </div>
       <div className="div3">3</div>
     </Container>
   );
@@ -37,6 +53,24 @@ const Container = styled.section`
     border-bottom: 1px solid var(--border_color);
     border-right: 1px solid var(--border_color);
     border-top: 1px solid var(--border_color);
+    padding: 40px;
+    p,h2 {
+      font-size: 20px;
+      font-family: "Open Sans", sans-serif;
+      color: var(--text_color);
+    }
+
+    .tech {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      
+      .item-tech{
+        display: flex;
+        gap: 10px;
+      }
+    }
   }
 
   .div3 {

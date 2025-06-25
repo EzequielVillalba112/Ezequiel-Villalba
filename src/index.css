@@ -11,6 +11,8 @@
   --border_color: #53514e;
   --text_color_nav: #ff7e00; 
   --text_color_nav_hover: #ffa031;
+  --btn-background: #e27100;
+  --btn-background-hover: #fc9520;
 }
 
 body {

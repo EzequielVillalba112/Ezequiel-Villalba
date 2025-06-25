@@ -1,18 +1,24 @@
 import styled from "styled-components";
 import { FaAsterisk } from "react-icons/fa";
-import { textProjects } from "../../utils/Text";
+import { proyects, textProjects } from "../../utils/Text";
 import { Title } from "../atomo/Title";
+import { ProyectItem } from "./ProyectItem";
 
-export const TitleSectProyects = () => {
+export const SectProyects = () => {
   return (
-    <Container>
-      <div className="div2">
-        <FaAsterisk color="#ff7e00" size="6rem" />
-      </div>
-      <div className="div4">
-        <Title text={textProjects[0].title} size="6rem" />
-      </div>
-    </Container>
+    <>
+      <Container>
+        <div className="div2">
+          <FaAsterisk color="#ff7e00" size="6rem" />
+        </div>
+        <div className="div4">
+          <Title text={textProjects[0].title} size="6rem" />
+        </div>
+      </Container>
+      {proyects.map((item, i)=>(
+        <ProyectItem data={item} key={i}/>
+      ))}
+    </>
   );
 };
 

@@ -1,8 +1,7 @@
 import { Nav } from "./components/organismos/Nav";
 import { Hero } from "./components/organismos/Hero";
 import { AboutMe } from "./components/organismos/AboutMe";
-import { TitleSectProyects } from "./components/organismos/TitleSectProyects";
-import { ProyectItem } from "./components/organismos/ProyectItem";
+import { SectProyects } from "./components/organismos/SectProyects";
 
 function App() {
   return (
@@ -10,8 +9,7 @@ function App() {
       <Nav />
       <Hero />
       <AboutMe />
-      <TitleSectProyects />
-      <ProyectItem/>
+      <SectProyects/>
     </>
   );
 }
