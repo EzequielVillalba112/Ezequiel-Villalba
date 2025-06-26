@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Title } from "../atomo/Title";
 import { ItemLogoTech } from "../molecula/itemLogoTech";
 import { Btn } from "../molecula/Btn";
+import { Carousel } from "./Carousel";
 
 export const ProyectItem = ({ data }) => {
   console.log(data);
@@ -21,10 +22,12 @@ export const ProyectItem = ({ data }) => {
             ))}
           </div>
 
-          <Btn text={"Ver página"} url={"#"} target={"_blank"}/>
+          <Btn text={"Ver página"} url={data.url} target={"_blank"}/>
         </div>
       </div>
-      <div className="div3">3</div>
+      <div className="div3">
+        <Carousel data={data.imgProyect} alt={data.title}/>
+      </div>
     </Container>
   );
 };
@@ -34,7 +37,8 @@ const Container = styled.section`
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(6, 1fr);
   width: 100%;
-  height: 80dvh;
+  min-height: 80dvh;
+  max-height: 90dvh;
   .div1 {
     display: flex;
     align-items: center;
@@ -74,6 +78,11 @@ const Container = styled.section`
   }
 
   .div3 {
+    padding: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-column: span 3 / span 3;
     grid-row: span 6 / span 6;
     grid-column-start: 3;

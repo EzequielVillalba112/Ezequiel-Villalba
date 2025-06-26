@@ -9,8 +9,8 @@ export const ItemLogoTech = ({img, alt}) => {
 }
 
 const Container = styled.div`
-    width: 40px;
-    height: 40px;
+    width: auto;
+    height: 50px;
     img{
         width: 100%;
         height: 100%;

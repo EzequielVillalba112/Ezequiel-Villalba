@@ -21,7 +21,7 @@ const Container = styled.li`
     text-decoration: none;
     font-family: "Source Sans 3", sans-serif;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.5rem;
     letter-spacing: 1.5px;
     color: var(--text_color_nav);
     text-transform: uppercase;
