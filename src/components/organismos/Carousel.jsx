@@ -54,7 +54,7 @@ const Container = styled.div`
   justify-content: space-between;
   width: 90%;
   height: 90%;
-
+  max-height: 60dvh;
   img {
     width: 100%;
     height: 100%;

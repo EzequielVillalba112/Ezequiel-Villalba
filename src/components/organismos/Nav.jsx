@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { textNav } from "../../utils/Text";
-import { ItemMenu } from "../molecula/ItemMenu";
+import { ItemMenu } from "../atomo/ItemMenu";
 
 export const Nav = () => {
   return (
@@ -27,7 +27,7 @@ const Container = styled.nav`
         justify-content: center;
         align-items: center;
         padding: 20px;
-        gap: 2rem;
+        gap: 1.5rem;
         list-style: none;
     }
 `;

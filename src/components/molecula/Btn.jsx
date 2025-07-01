@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-const orag = "#e27100";
-
 export const Btn = ({ text, url, target = "_blank" }) => {
   return (
     <StyledLink
@@ -34,24 +32,24 @@ const StyledLink = styled.a`
   display: inline-flex;
   align-items: center;
   font-family: "Open Sans", sans-serif;
-  padding: 20px 35px;
+  padding: 10px 30px;
   font-size: 1.2rem;
-  color: ${orag};
+  color: #e27100;
   font-weight: 500;
   letter-spacing: 0.24rem;
-  text-transform: uppercase;
-  border: 2px solid ${orag};
+  
+  border: 2px solid #e27100;
   border-radius: 38px;
   overflow: hidden;
   text-decoration: none;
   transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  height: 75px;
+  height: 50px;
   max-width: 300px;
   &::after {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: ${orag};
+    background-color: #e27100;
     transform: scaleX(0);
     transform-origin: 100% 50%;
     transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);

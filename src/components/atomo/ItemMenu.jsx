@@ -24,7 +24,6 @@ const Container = styled.li`
     font-size: 1.5rem;
     letter-spacing: 1.5px;
     color: var(--text_color_nav);
-    text-transform: uppercase;
     z-index: 1;
     &:hover {
       color: var(--text_color_nav_hover);

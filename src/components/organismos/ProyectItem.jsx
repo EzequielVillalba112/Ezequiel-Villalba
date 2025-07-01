@@ -1,12 +1,10 @@
 import styled from "styled-components";
 import { Title } from "../atomo/Title";
-import { ItemLogoTech } from "../molecula/itemLogoTech";
+import { ItemLogoTech } from "../atomo/itemLogoTech";
 import { Btn } from "../molecula/Btn";
 import { Carousel } from "./Carousel";
 
 export const ProyectItem = ({ data }) => {
-  console.log(data);
-
   return (
     <Container>
       <div className="div1">
@@ -32,7 +30,7 @@ export const ProyectItem = ({ data }) => {
   );
 };
 
-const Container = styled.section`
+const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(6, 1fr);

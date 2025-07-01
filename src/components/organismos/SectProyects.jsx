@@ -15,9 +15,11 @@ export const SectProyects = () => {
           <Title text={textProjects[0].title} size="6rem" />
         </div>
       </Container>
-      {proyects.map((item, i)=>(
-        <ProyectItem data={item} key={i}/>
-      ))}
+      <ContainerProyects>
+        {proyects.map((item, i) => (
+          <ProyectItem data={item} key={i} />
+        ))}
+      </ContainerProyects>
     </>
   );
 };
@@ -53,3 +55,5 @@ const Container = styled.div`
     border-bottom: 1px solid var(--border_color);
   }
 `;
+
+const ContainerProyects = styled.section``;
