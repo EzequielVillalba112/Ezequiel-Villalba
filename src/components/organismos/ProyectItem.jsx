@@ -8,7 +8,7 @@ export const ProyectItem = ({ data }) => {
   return (
     <Container>
       <div className="div1">
-        <Title text={data.nProyect} text2={data.title} size={"4rem"} />
+        <Title text={data.nProyect} text2={data.title} />
       </div>
       <div className="div2">
         <p>{data.detail}</p>
@@ -33,10 +33,9 @@ export const ProyectItem = ({ data }) => {
 const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   width: 100%;
-  min-height: 80dvh;
-  max-height: 90dvh;
+  height: auto;
   .div1 {
     display: flex;
     align-items: center;
@@ -45,6 +44,7 @@ const Container = styled.div`
     border-bottom: 1px solid var(--border_color);
     border-right: 1px solid var(--border_color);
     border-top: 1px solid var(--border_color);
+    padding: 40px;
   }
 
   .div2 {
@@ -88,5 +88,14 @@ const Container = styled.div`
     border-bottom: 1px solid var(--border_color);
     border-left: 1px solid var(--border_color);
     border-top: 1px solid var(--border_color);
+  }
+
+   @media (max-width: 800px) {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+   .div3{
+    border-left: none;
+   }
   }
 `;

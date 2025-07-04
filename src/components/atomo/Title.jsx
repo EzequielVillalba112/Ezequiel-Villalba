@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const Title = ({ text, text2 = "", size }) => {
+export const Title = ({ text, text2 = ""}) => {
   return (
-    <Container $size={size}>
+    <Container >
       <h2>
         {text}
         {text2 !== "" && (
@@ -23,10 +23,9 @@ const Container = styled.div`
 
   h2 {
     font-weight: 600;
-    font-size: ${(props) => props.$size};
+    font-size: clamp(2.5rem, 6vw, 6rem);
     text-transform: uppercase;
     color: var(--text_color);
-    margin-left: 40px;
     font-family: "Source Sans 3", sans-serif;
     align-items: baseline;
   }
@@ -39,4 +38,5 @@ const Container = styled.div`
     border-radius: 50%;
     background-color: var(--text_color_nav);
   }
+
 `;

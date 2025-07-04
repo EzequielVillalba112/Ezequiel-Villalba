@@ -4,11 +4,10 @@ import { Title } from "../atomo/Title";
 import { PiArrowBendDownRightFill } from "react-icons/pi";
 
 export const AboutMe = () => {
-
   return (
-    <Container>
+    <Container id="About-me">
       <div className="div1">
-        <Title text={textAboutMe[0].title} size="4rem" />
+        <Title text={textAboutMe[0].title}/>
       </div>
       <div className="div2">
         <PiArrowBendDownRightFill color="#ff7e00" size="9rem" />
@@ -42,6 +41,7 @@ const Container = styled.section`
     align-items: center;
     border-bottom: 1px solid var(--border_color);
     border-right: 1px solid var(--border_color);
+    padding: 40px;
   }
 
   .div2 {
@@ -54,9 +54,9 @@ const Container = styled.section`
     border-right: 1px solid var(--border_color);
     display: flex;
     justify-content: end;
-    
-    svg{
-        margin-right: 40px;
+
+    svg {
+      margin-right: 40px;
     }
   }
 
@@ -70,8 +70,27 @@ const Container = styled.section`
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 5vw, 1.4rem);
     border-left: 1px solid var(--border_color);
     border-bottom: 1px solid var(--border_color);
+  }
+
+  @media (max-width: 1000px) {
+    height: auto;
+    .div3 {
+      gap: 1.5rem;
+    }
+  }
+
+  @media (max-width: 800px) {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    .div2 {
+      display: none;
+    }
+    .div3 {
+      border-left: none;
+    }
   }
 `;

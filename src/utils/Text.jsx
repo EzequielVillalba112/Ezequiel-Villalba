@@ -29,36 +29,32 @@ export const textAboutMe = [
     title: "Sobre mí",
     introduction: (
       <p>
-        ¡Hola!, Soy técnico en Análisis de Sistemas Informáticos de Misiones,
-        Argentina.
+        ¡Hola! Soy Técnico en Análisis de Sistemas Informáticos, oriundo de
+        Misiones, Argentina, con pasión por el desarrollo web y la creación de
+        soluciones digitales efectivas.
       </p>
     ),
     skills: (
       <p>
-        Me especializo en desarrollo front-end con tecnologías como{" "}
-        <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>{" "}
-        y <strong>React</strong>.
+        Me especializo en desarrollo front-end utilizando <strong>HTML</strong>,{" "}
+        <strong>CSS</strong>, <strong>JavaScript</strong> y{" "}
+        <strong>React</strong>, enfocándome en la construcción de interfaces
+        modernas, accesibles y responsivas.
       </p>
     ),
     interests: (
       <p>
-        Me gusta aprender nuevas tecnologías y desarrollar interfaces reales que
-        sean fluidas y fáciles de usar.
+        Disfruto aprender nuevas tecnologías y transformar ideas en productos
+        interactivos que sean intuitivos, rápidos y agradables de usar.
       </p>
     ),
     experience: (
       <p>
-        Actualmente estoy en búsqueda de mi primera oportunidad profesional como
-        desarrollador front-end.
+        Estoy en búsqueda de mi primera experiencia profesional como
+        desarrollador front-end, donde pueda aportar mis habilidades técnicas y
+        seguir creciendo en un entorno colaborativo.
       </p>
     ),
-  },
-];
-
-export const textProjects = [
-  {
-    title: "Proyectos",
-    description: "Algunos de mis proyectos.",
   },
 ];
 
@@ -108,10 +104,9 @@ export const textFooter = [
 export const textNav = [
   {
     items: [
-      { text: "Inicio", url: "#" },
-      { text: "Sobre mi", url: "#" },
-      { text: "Proyectos", url: "#" },
-      { text: "Contacto", url: "#" },
+      { text: "Sobre mi", url: "#About-me" },
+      { text: "Proyectos", url: "#Proyectos" },
+      { text: "Contacto", url: "#Contacto" },
     ],
   },
 ];

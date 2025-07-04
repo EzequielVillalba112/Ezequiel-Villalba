@@ -6,7 +6,7 @@ export const Hero = () => {
   return (
     <Container>
       <div className="div1">
-        <Title text={"portafolio"} size="6rem"/>
+        <Title text={"portafolio"} />
       </div>
       <div className="div2">
         <FaAsterisk color="#ff7e00" size="9rem" />
@@ -37,6 +37,7 @@ const Container = styled.section`
     align-items: center;
     border-bottom: 1px solid var(--border_color);
     border-right: 1px solid var(--border_color);
+    padding: 40px;
   }
 
   .div2 {
@@ -85,6 +86,24 @@ const Container = styled.section`
       color: var(--text_color);
       text-align: center;
       margin-bottom: 10px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .div3 {
+      display: none;
+    }
+    .div2 {
+      display: none;
+    }
+    .div1 {
+      grid-column: span 3 / span 2;
+      h2 {
+        font-size: 3rem !important;
+      }
+    }
+    .div4 {
+      grid-column: span 3 / span 2;
     }
   }
 `;
