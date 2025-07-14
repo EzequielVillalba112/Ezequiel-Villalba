@@ -5,7 +5,7 @@ import { Btn } from "../molecula/Btn";
 
 export const Hero = () => {
   const handleDownload = () => {
-    fetch("/CV-Ezequiel-Villalba.pdf")
+    fetch("/CV_Ezequiel_Villalba.pdf")
       .then((response) => response.blob())
       .then((blob) => {
         const url = window.URL.createObjectURL(blob);
