@@ -1,22 +1,45 @@
 import styled from "styled-components";
 import { FaAsterisk } from "react-icons/fa";
 import { Title } from "../atomo/Title";
+import { Btn } from "../molecula/Btn";
 
 export const Hero = () => {
+  const handleDownload = () => {
+    fetch("/CV-Ezequiel-Villalba.pdf")
+      .then((response) => response.blob())
+      .then((blob) => {
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+
+        // Obtener fecha actual
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, "0"); 
+        const dd = String(today.getDate()).padStart(2, "0");
+        const fecha = `${yyyy}-${mm}-${dd}`;
+
+        a.download = `Ezequiel_Villalba_CV_${fecha}.pdf`;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        window.URL.revokeObjectURL(url);
+      });
+  };
   return (
     <Container>
       <div className="div1">
-        <Title text={"portafolio"} />
+        <Title text={"Ezequiel Villalba"} />
       </div>
       <div className="div2">
         <FaAsterisk color="#ff7e00" size="9rem" />
       </div>
       <div className="div3"></div>
       <div className="div4">
-        <h2>Ezequiel Villalba</h2>
         <h3>
           Front-end web <br /> development
         </h3>
+        <Btn text={"Descargar CV"} onclick={handleDownload}/>
       </div>
     </Container>
   );
@@ -68,6 +91,8 @@ const Container = styled.section`
     grid-column-start: 3;
     grid-row-start: 3;
     display: flex;
+    align-items: center;
+    gap: 20px;
     flex-direction: column;
     justify-content: end;
     border-left: 1px solid var(--border_color);

@@ -1,19 +1,19 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-export const ItemLogoTech = ({img, alt}) => {
+export const ItemLogoTech = ({ img, alt }) => {
   return (
     <Container>
-        <img src={img} alt={alt} />
+      <img src={img} alt={alt}/>
     </Container>
-  )
-}
+  );
+};
 
 const Container = styled.div`
-    width: auto;
-    height: 40px;
-    img{
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
+  width: auto;
+  height: 40px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 `;
